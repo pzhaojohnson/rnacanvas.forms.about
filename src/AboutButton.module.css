@@ -1,0 +1,36 @@
+.about-button {
+  position: absolute;
+  right: 28px;
+  top: 8px;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 1000px;
+
+  border: 1px solid #bbbbcf;
+  box-shadow: none;
+
+  outline: none;
+
+  background-color: #d5d5e41f;
+  backdrop-filter: blur(25px);
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+
+  cursor: pointer;
+}
+
+.about-button:hover {
+  background-color: #c9c9dc3b;
+  border-color: #9898ab;
+}
+
+.about-button:active {
+  background-color: #a0a0b65c;
+  border-color: #51515c;
+}
