@@ -8,12 +8,12 @@
 
   border-radius: 1000px;
 
-  border: 1px solid #bbbbcf;
+  border: 1px solid #aaaac2;
   box-shadow: none;
 
   outline: none;
 
-  background-color: #d5d5e41f;
+  background-color: transparent;
   backdrop-filter: blur(25px);
 
   font-family: "Open Sans", sans-serif;
@@ -26,11 +26,11 @@
 }
 
 .about-button:hover {
-  background-color: #c9c9dc3b;
-  border-color: #9898ab;
+  border-color: #515165;
 }
 
 .about-button:active {
-  background-color: #a0a0b65c;
-  border-color: #51515c;
+  border-color: black;
+  background-color: black;
+  color: white;
 }

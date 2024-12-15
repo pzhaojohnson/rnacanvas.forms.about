@@ -1,33 +1,42 @@
 .about-form {
   position: absolute;
-  right: 107px;
-  top: 77px;
+  top: 65px;
+  right: 86px;
 
-  width: 416px;
-  height: 564px;
 
-  border-radius: 18px;
+  width: 465px;
+  height: 518px;
 
-  border: 1px solid #2b0744;
+  border-radius: 16px;
 
-  padding: 20px 0px 50px 32px;
+  border: 1px solid #220536;
 
-  background-color: #f0f0ffc2;
+  padding: 24px 4px 50px 33px;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #dfdfff78;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .title {
+  margin: 0px;
+  padding: 0px;
+
   font-family: "Open Sans", sans-serif;
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   font-style: normal;
   color: black;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  pointer-events: none;
 }
 
 .content-container {
-  margin: 24px 0px 0px 21px;
+  margin: 22px 0px 0px 21px;
 
   display: flex;
   flex-direction: column;
@@ -37,11 +46,17 @@
 }
 
 .text {
+  margin: 0px;
+  padding: 0px;
+
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
   color: black;
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .link {
@@ -49,6 +64,7 @@
   font-weight: 600;
 
   pointer-events: auto;
+
   cursor: pointer;
 
   text-decoration: none;
@@ -59,15 +75,17 @@
 }
 
 .contact-email {
-  margin-top: 20px;
+  margin-top: 35px;
 
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
+
+  pointer-events: none;
 }
 
 .paper-doi {
-  margin-top: 20px;
+  margin-top: 40px;
 
   display: flex;
   flex-direction: column;
@@ -91,9 +109,12 @@
   font-style: normal;
   color: #871414;
 
+  pointer-events: auto;
+
   cursor: pointer;
 
-  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
 
   background-color: transparent;
 }

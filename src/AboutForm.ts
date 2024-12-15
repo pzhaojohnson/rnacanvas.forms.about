@@ -88,13 +88,13 @@ function BoldSpan(textContent: string) {
 function SilvecPlug() {
   let RNAcanvasCode = BoldSpan('RNAcanvas Code');
 
-  let SilvecBiologics = BoldSpan('Silvec Biologics - an RNA company.');
+  let SilvecBiologics = BoldSpan('Silvec Biologics');
 
-  return P(RNAcanvasCode, ' is developed by ', SilvecBiologics);
+  return P(RNAcanvasCode, ' is developed by ', SilvecBiologics, ' - an RNA company.');
 }
 
 function ContactEmail() {
-  let leadingLine = P('Send any questions to...');
+  let leadingLine = P('Feel free to send any questions to...');
 
   let label = BoldSpan('Email: ');
 
@@ -121,7 +121,7 @@ function ContactEmailLink() {
 }
 
 function PaperDOI() {
-  let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research.');
+  let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research');
   nucleicAcidsResearch.style.fontStyle = 'italic';
 
   let leadingLine = P('Article in ', nucleicAcidsResearch);
@@ -130,14 +130,14 @@ function PaperDOI() {
 
   let link = PaperDOILink();
 
-  let linkLine = P(label, link);
-  linkLine.style.marginTop = '7px';
+  let linkLine = P(label, link, '.');
+  linkLine.style.marginTop = '8px';
 
   let trailingLine1 = P('Citations are greatly appreciated!');
-  trailingLine1.style.marginTop = '14px';
+  trailingLine1.style.marginTop = '18px';
 
   let trailingLine2 = P('(If you use RNAcanvas Code to draw structures in publications.)');
-  trailingLine2.style.marginTop = '7px';
+  trailingLine2.style.marginTop = '8px';
 
   let domNode = document.createElement('div');
   domNode.classList.add(styles['paper-doi']);
@@ -163,7 +163,9 @@ function PaperDOILink() {
 function GitHubDocsRef() {
   let gitHubDocs = GitHubDocsLink();
 
-  return P('See the ', gitHubDocs, ' for technical documentation regarding RNAcanvas Code.');
+  let domNode = P('See the ', gitHubDocs, ' for technical documentation regarding RNAcanvas Code.');
+  domNode.style.marginTop = '40px';
+  return domNode;
 }
 
 function GitHubDocsLink() {
