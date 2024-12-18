@@ -22,6 +22,8 @@ export class AboutForm {
 
     contentContainer.append(ContactEmail());
 
+    contentContainer.append(CustomGPTPlug());
+
     contentContainer.append(PaperDOI());
 
     contentContainer.append(GitHubDocsRef());
@@ -120,6 +122,31 @@ function ContactEmailLink() {
   return domNode;
 }
 
+function CustomGPTPlug() {
+  let RNAcanvasCustomGPT = CustomGPTLink();
+
+  let domNode = P('Or ask the ', RNAcanvasCustomGPT, '.');
+
+  domNode.style.marginTop = '27px';
+
+  return domNode;
+}
+
+function CustomGPTLink() {
+  let domNode = document.createElement('a');
+
+  domNode.classList.add(styles['link']);
+
+  domNode.href = 'https://chatgpt.com/g/g-jh8gXtvrC-rnacanvas-ai-assistant';
+
+  domNode.textContent = 'RNAcanvas Custom GPT';
+
+  domNode.target = '_blank';
+  domNode.rel = 'noreferrer noopener';
+
+  return domNode;
+}
+
 function PaperDOI() {
   let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research');
   nucleicAcidsResearch.style.fontStyle = 'italic';
@@ -164,7 +191,7 @@ function GitHubDocsRef() {
   let gitHubDocs = GitHubDocsLink();
 
   let domNode = P('See the ', gitHubDocs, ' for technical documentation regarding RNAcanvas Code.');
-  domNode.style.marginTop = '40px';
+  domNode.style.marginTop = '43px';
   return domNode;
 }
 
