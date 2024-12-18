@@ -5,7 +5,7 @@
 
 
   width: 465px;
-  height: 518px;
+  height: 515px;
 
   border-radius: 16px;
 
@@ -13,7 +13,7 @@
 
   padding: 24px 4px 50px 33px;
 
-  background-color: #dfdfff78;
+  background-color: #e2e2ff6e;
 
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -36,7 +36,7 @@
 }
 
 .content-container {
-  margin: 22px 0px 0px 21px;
+  margin: 24px 0px 0px 21px;
 
   display: flex;
   flex-direction: column;
@@ -86,10 +86,6 @@
 
 .paper-doi {
   margin-top: 40px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
 }
 
 .close-button {
