@@ -14,7 +14,9 @@
   outline: none;
 
   background-color: transparent;
+
   backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 
   font-family: "Open Sans", sans-serif;
   font-size: 14px;

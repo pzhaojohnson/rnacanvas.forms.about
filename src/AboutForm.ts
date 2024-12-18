@@ -151,13 +151,13 @@ function PaperDOI() {
   let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research');
   nucleicAcidsResearch.style.fontStyle = 'italic';
 
-  let leadingLine = P('Article in ', nucleicAcidsResearch);
+  let leadingLine = P('Article in ', nucleicAcidsResearch, '.');
 
   let label = BoldSpan('DOI: ');
 
   let link = PaperDOILink();
 
-  let linkLine = P(label, link, '.');
+  let linkLine = P(label, link);
   linkLine.style.marginTop = '8px';
 
   let trailingLine1 = P('Citations are greatly appreciated!');
