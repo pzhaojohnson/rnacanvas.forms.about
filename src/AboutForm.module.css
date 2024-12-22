@@ -4,8 +4,8 @@
   right: 86px;
 
 
-  width: 465px;
-  height: 519px;
+  width: 467px;
+  height: 530px;
 
   border-radius: 16px;
 
@@ -13,10 +13,12 @@
 
   padding: 24px 4px 50px 33px;
 
-  background-color: #e2e2ff6e;
+  background-color: #e2e2ff61;
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 14px rgba(219, 219, 238, 0.09);
 }
 
 .title {
@@ -85,7 +87,7 @@
 }
 
 .paper-doi {
-  margin-top: 43px;
+  margin-top: 46px;
 }
 
 .close-button {
