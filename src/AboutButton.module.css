@@ -25,6 +25,9 @@
   color: black;
 
   cursor: pointer;
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .about-button:hover {
