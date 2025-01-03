@@ -127,7 +127,7 @@ function CustomGPTPlug() {
 
   let domNode = P('Or ask the ', RNAcanvasCustomGPT, '.');
 
-  domNode.style.marginTop = '30px';
+  domNode.style.marginTop = '38px';
 
   return domNode;
 }
@@ -161,7 +161,7 @@ function PaperDOI() {
   linkLine.style.marginTop = '8px';
 
   let trailingLine1 = P('Citations are greatly appreciated!');
-  trailingLine1.style.marginTop = '20px';
+  trailingLine1.style.marginTop = '27px';
 
   let trailingLine2 = P('(If you use RNAcanvas Code to draw structures in publications.)');
   trailingLine2.style.marginTop = '8px';
@@ -191,7 +191,7 @@ function GitHubDocsRef() {
   let gitHubDocs = GitHubDocsLink();
 
   let domNode = P('Visit the ', gitHubDocs, ' to see the technical documentation for RNAcanvas Code.');
-  domNode.style.marginTop = '46px';
+  domNode.style.marginTop = '51px';
   return domNode;
 }
 

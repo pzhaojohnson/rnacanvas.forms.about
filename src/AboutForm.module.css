@@ -4,14 +4,14 @@
   right: 86px;
 
 
-  width: 467px;
-  height: 530px;
+  width: 399px;
+  height: 535px;
 
   border-radius: 16px;
 
   border: 1px solid #220536;
 
-  padding: 24px 4px 50px 33px;
+  padding: 24px 32px 50px 36px;
 
   background-color: #e2e2ff61;
 
@@ -38,7 +38,7 @@
 }
 
 .content-container {
-  margin: 24px 0px 0px 21px;
+  margin: 24px 0px 0px 22px;
 
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
   padding: 0px;
 
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   font-style: normal;
   color: black;
@@ -77,7 +77,7 @@
 }
 
 .contact-email {
-  margin-top: 35px;
+  margin-top: 36px;
 
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@
 }
 
 .paper-doi {
-  margin-top: 46px;
+  margin-top: 47px;
 }
 
 .close-button {
