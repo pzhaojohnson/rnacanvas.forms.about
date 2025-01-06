@@ -87,6 +87,39 @@ function BoldSpan(textContent: string) {
   return domNode;
 }
 
+class Link {
+  readonly domNode = document.createElement('span');
+
+  /**
+   * The wrapped anchor element.
+   *
+   * The purpose of wrapping the anchor element
+   * is to prevent the anchor element from stealing focus
+   * from the rest of the app,
+   * which would interfere with key bindings.
+   */
+  #a = document.createElement('a');
+
+  constructor() {
+    this.domNode.classList.add(styles['link']);
+
+    // forward clicks to the wrapped anchor element
+    this.domNode.addEventListener('click', () => this.#a.click());
+  }
+
+  get href() { return this.#a.href; }
+  set href(href) { this.#a.href = href; }
+
+  get textContent() { return this.domNode.textContent; }
+  set textContent(textContent) { this.domNode.textContent = textContent; }
+
+  get target() { return this.#a.target; }
+  set target(target) { this.#a.target = target; }
+
+  get rel() { return this.#a.rel; }
+  set rel(rel) { this.#a.rel = rel; }
+}
+
 function SilvecPlug() {
   let RNAcanvasCode = BoldSpan('RNAcanvas Code');
 
@@ -111,15 +144,13 @@ function ContactEmail() {
 }
 
 function ContactEmailLink() {
-  let domNode = document.createElement('a');
+  let contactEmailLink = new Link();
 
-  domNode.classList.add(styles['link']);
+  contactEmailLink.href = 'mailto:contact@rnacanvas.app';
 
-  domNode.href = 'mailto:contact@rnacanvas.app';
+  contactEmailLink.textContent = 'contact@rnacanvas.app';
 
-  domNode.textContent = 'contact@rnacanvas.app';
-
-  return domNode;
+  return contactEmailLink.domNode;
 }
 
 function CustomGPTPlug() {
@@ -133,18 +164,16 @@ function CustomGPTPlug() {
 }
 
 function CustomGPTLink() {
-  let domNode = document.createElement('a');
+  let customGPTLink = new Link();
 
-  domNode.classList.add(styles['link']);
+  customGPTLink.href = 'https://chatgpt.com/g/g-jh8gXtvrC-rnacanvas-ai-assistant';
 
-  domNode.href = 'https://chatgpt.com/g/g-jh8gXtvrC-rnacanvas-ai-assistant';
+  customGPTLink.textContent = 'RNAcanvas Custom GPT';
 
-  domNode.textContent = 'RNAcanvas Custom GPT';
+  customGPTLink.target = '_blank';
+  customGPTLink.rel = 'noreferrer noopener';
 
-  domNode.target = '_blank';
-  domNode.rel = 'noreferrer noopener';
-
-  return domNode;
+  return customGPTLink.domNode;
 }
 
 function PaperDOI() {
@@ -173,18 +202,16 @@ function PaperDOI() {
 }
 
 function PaperDOILink() {
-  let domNode = document.createElement('a');
+  let paperDOILink = new Link();
 
-  domNode.classList.add(styles['link']);
+  paperDOILink.href = 'https://doi.org/10.1093/nar/gkad302';
 
-  domNode.href = 'https://doi.org/10.1093/nar/gkad302';
+  paperDOILink.textContent = '10.1093/nar/gkad302';
 
-  domNode.textContent = '10.1093/nar/gkad302';
+  paperDOILink.target = '_blank';
+  paperDOILink.rel = 'noreferrer noopener';
 
-  domNode.target = '_blank';
-  domNode.rel = 'noreferrer noopener';
-
-  return domNode;
+  return paperDOILink.domNode;
 }
 
 function GitHubDocsRef() {
@@ -196,22 +223,20 @@ function GitHubDocsRef() {
 }
 
 function GitHubDocsLink() {
-  let domNode = document.createElement('a');
+  let gitHubDocsLink = new Link();
 
-  domNode.classList.add(styles['link']);
+  gitHubDocsLink.href = 'https://pzhaojohnson.github.io/rnacanvas.code/';
 
-  domNode.href = 'https://pzhaojohnson.github.io/rnacanvas.code/';
+  gitHubDocsLink.textContent = 'GitHub docs';
 
-  domNode.textContent = 'GitHub docs';
+  gitHubDocsLink.target = '_blank';
+  gitHubDocsLink.rel = 'noreferrer noopener';
 
-  domNode.target = '_blank';
-  domNode.rel = 'noreferrer noopener';
-
-  return domNode;
+  return gitHubDocsLink.domNode;
 }
 
 function CloseButton() {
-  let domNode = document.createElement('button');
+  let domNode = document.createElement('p');
 
   domNode.classList.add(styles['close-button']);
 
