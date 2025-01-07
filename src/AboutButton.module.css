@@ -3,8 +3,8 @@
   right: 28px;
   top: 8px;
 
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
 
   border-radius: 1000px;
 
@@ -12,6 +12,9 @@
   box-shadow: none;
 
   outline: none;
+
+  margin: 0px;
+  padding: 0px;
 
   background-color: transparent;
 
@@ -23,6 +26,10 @@
   font-weight: 700;
   font-style: normal;
   color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   cursor: pointer;
 
