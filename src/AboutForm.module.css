@@ -4,7 +4,7 @@
   right: 86px;
 
   width: 396px;
-  height: 536px;
+  height: 535px;
 
   border-radius: 10px;
 
@@ -71,7 +71,7 @@
 }
 
 .contact-email {
-  margin-top: 40px;
+  margin-top: 41px;
 
   display: flex;
   flex-direction: column;

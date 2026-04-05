@@ -125,7 +125,7 @@ function SilvecPlug() {
 
   let SilvecBiologics = BoldSpan('Silvec Biologics');
 
-  return P(RNAcanvasCode, ' is developed by ', SilvecBiologics, ' - an RNA company.');
+  return P(RNAcanvasCode, ' is developed by ', SilvecBiologics, '.');
 }
 
 function ContactEmail() {
