@@ -40,9 +40,16 @@ export class AboutForm {
   }
 
   appendTo(container: Node): void {
-    this.#dragHandler.untranslate();
+    this.reposition();
 
     container.appendChild(this.domNode);
+  }
+
+  /**
+   * Undoes any dragging of the About form done by the user.
+   */
+  reposition(): void {
+    this.#dragHandler.untranslate();
   }
 }
 
