@@ -1,6 +1,6 @@
 import * as styles from './AboutForm.module.css';
 
-import { DragTranslater } from '@rnacanvas/forms';
+import { DragHandler } from '@rnacanvas/forms';
 
 /**
  * A form with information about RNAcanvas and links to more resources.
@@ -8,7 +8,7 @@ import { DragTranslater } from '@rnacanvas/forms';
 export class AboutForm {
   readonly domNode = document.createElement('div');
 
-  #dragTranslater;
+  #dragHandler;
 
   constructor() {
     this.domNode.classList.add(styles['about-form']);
@@ -32,7 +32,7 @@ export class AboutForm {
     closeButton.addEventListener('click', () => this.close());
     this.domNode.append(closeButton);
 
-    this.#dragTranslater = new DragTranslater(this.domNode);
+    this.#dragHandler = new DragHandler(this.domNode);
   }
 
   close() {
@@ -40,7 +40,7 @@ export class AboutForm {
   }
 
   appendTo(container: Node): void {
-    this.#dragTranslater.untranslate();
+    this.#dragHandler.untranslate();
 
     container.appendChild(this.domNode);
   }
