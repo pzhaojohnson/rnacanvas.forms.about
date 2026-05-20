@@ -3,8 +3,8 @@
   top: 65px;
   right: 86px;
 
-  width: 396px;
-  height: 535px;
+  width: 405px;
+  height: 494px;
 
   border-radius: 10px;
 
@@ -57,7 +57,7 @@
 
 .link {
   color: #18ffff;
-  font-weight: 600;
+  font-weight: 700;
 
   pointer-events: auto;
 
@@ -70,18 +70,18 @@
   text-decoration: underline;
 }
 
+.paper-doi {
+  margin-top: 52px;
+}
+
 .contact-email {
-  margin-top: 41px;
+  margin-top: 43px;
 
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 11px;
 
   pointer-events: none;
-}
-
-.paper-doi {
-  margin-top: 51px;
 }
 
 .close-button {

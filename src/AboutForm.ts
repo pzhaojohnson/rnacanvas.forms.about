@@ -1,5 +1,9 @@
 import * as styles from './AboutForm.module.css';
 
+import { IntroLine } from './IntroLine';
+
+import { TheBestWayToShowSupport } from './TheBestWaytToShowSupport';
+
 import { DragHandler } from '@rnacanvas/forms';
 
 /**
@@ -7,6 +11,10 @@ import { DragHandler } from '@rnacanvas/forms';
  */
 export class AboutForm {
   readonly domNode = document.createElement('div');
+
+  readonly #introLine = new IntroLine();
+
+  readonly #theBestWayToShowSupport = new TheBestWayToShowSupport();
 
   #dragHandler;
 
@@ -18,13 +26,14 @@ export class AboutForm {
     let contentContainer = ContentContainer();
     this.domNode.append(contentContainer);
 
-    contentContainer.append(SilvecPlug());
-
-    contentContainer.append(ContactEmail());
-
-    contentContainer.append(CustomGPTPlug());
+    [
+      this.#introLine,
+      this.#theBestWayToShowSupport,
+    ].forEach(ele => contentContainer.append(ele.domNode));
 
     contentContainer.append(PaperDOI());
+
+    contentContainer.append(ContactEmail());
 
     contentContainer.append(GitHubDocsRef());
 
@@ -127,12 +136,39 @@ class Link {
   set rel(rel) { this.#a.rel = rel; }
 }
 
-function SilvecPlug() {
-  let RNAcanvasCode = BoldSpan('RNAcanvas Code');
+function PaperDOI() {
+  let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research');
+  nucleicAcidsResearch.style.fontStyle = 'italic';
 
-  let SilvecBiologics = BoldSpan('Silvec Biologics');
+  let leadingLine = P('Article in ', nucleicAcidsResearch, '.');
 
-  return P(RNAcanvasCode, ' is developed by ', SilvecBiologics, '.');
+  let label = BoldSpan('DOI: ');
+
+  let link = PaperDOILink();
+
+  let linkLine = P(label, link);
+  linkLine.style.marginTop = '11px';
+
+  let domNode = document.createElement('div');
+  domNode.classList.add(styles['paper-doi']);
+  domNode.append(leadingLine, linkLine);
+  return domNode;
+}
+
+function PaperDOILink() {
+  let paperDOILink = new Link();
+
+  paperDOILink.href = 'https://doi.org/10.1093/nar/gkad302';
+
+  paperDOILink.textContent = '10.1093/nar/gkad302';
+
+  paperDOILink.target = '_blank';
+  paperDOILink.rel = 'noreferrer noopener';
+
+  paperDOILink.domNode.style.userSelect = 'text';
+  paperDOILink.domNode.style.webkitUserSelect = 'text';
+
+  return paperDOILink.domNode;
 }
 
 function ContactEmail() {
@@ -157,75 +193,17 @@ function ContactEmailLink() {
 
   contactEmailLink.textContent = 'contact@rnacanvas.app';
 
+  contactEmailLink.domNode.style.userSelect = 'text';
+  contactEmailLink.domNode.style.webkitUserSelect = 'text';
+
   return contactEmailLink.domNode;
-}
-
-function CustomGPTPlug() {
-  let RNAcanvasCustomGPT = CustomGPTLink();
-
-  let domNode = P('Or ask the ', RNAcanvasCustomGPT, '.');
-
-  domNode.style.marginTop = '41px';
-
-  return domNode;
-}
-
-function CustomGPTLink() {
-  let customGPTLink = new Link();
-
-  customGPTLink.href = 'https://chatgpt.com/g/g-jh8gXtvrC-rnacanvas-ai-assistant';
-
-  customGPTLink.textContent = 'RNAcanvas Custom GPT';
-
-  customGPTLink.target = '_blank';
-  customGPTLink.rel = 'noreferrer noopener';
-
-  return customGPTLink.domNode;
-}
-
-function PaperDOI() {
-  let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research');
-  nucleicAcidsResearch.style.fontStyle = 'italic';
-
-  let leadingLine = P('Article in ', nucleicAcidsResearch, '.');
-
-  let label = BoldSpan('DOI: ');
-
-  let link = PaperDOILink();
-
-  let linkLine = P(label, link);
-  linkLine.style.marginTop = '8px';
-
-  let trailingLine1 = P('Citations are greatly appreciated!');
-  trailingLine1.style.marginTop = '30px';
-
-  let trailingLine2 = P('(If you use RNAcanvas Code to draw structures in publications.)');
-  trailingLine2.style.marginTop = '8px';
-
-  let domNode = document.createElement('div');
-  domNode.classList.add(styles['paper-doi']);
-  domNode.append(leadingLine, linkLine, trailingLine1, trailingLine2);
-  return domNode;
-}
-
-function PaperDOILink() {
-  let paperDOILink = new Link();
-
-  paperDOILink.href = 'https://doi.org/10.1093/nar/gkad302';
-
-  paperDOILink.textContent = '10.1093/nar/gkad302';
-
-  paperDOILink.target = '_blank';
-  paperDOILink.rel = 'noreferrer noopener';
-
-  return paperDOILink.domNode;
 }
 
 function GitHubDocsRef() {
   let gitHubDocs = GitHubDocsLink();
 
-  let domNode = P('Visit the ', gitHubDocs, ' to see the technical documentation for RNAcanvas Code.');
-  domNode.style.marginTop = '54px';
+  let domNode = P('Visit the ', gitHubDocs, ' for further information on RNAcanvas.');
+  domNode.style.marginTop = '55px';
   return domNode;
 }
 
