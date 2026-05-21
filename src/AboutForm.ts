@@ -140,7 +140,7 @@ function PaperDOI() {
   let nucleicAcidsResearch = BoldSpan('Nucleic Acids Research');
   nucleicAcidsResearch.style.fontStyle = 'italic';
 
-  let leadingLine = P('Article in ', nucleicAcidsResearch, '.');
+  let leadingLine = P('Please cite the following article in ', nucleicAcidsResearch, '.');
 
   let label = BoldSpan('DOI: ');
 

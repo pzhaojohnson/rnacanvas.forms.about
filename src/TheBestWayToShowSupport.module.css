@@ -1,0 +1,30 @@
+.the-best-way-to-show-support {
+  margin-top: 38px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.reasons {
+  margin: 12px 0px 0px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dotted-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 1000px;
+
+  background-color: white;
+}
