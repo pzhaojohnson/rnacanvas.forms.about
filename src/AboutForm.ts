@@ -202,7 +202,7 @@ function ContactEmailLink() {
 function GitHubDocsRef() {
   let gitHubDocs = GitHubDocsLink();
 
-  let domNode = P('Visit the ', gitHubDocs, ' for further information on RNAcanvas.');
+  let domNode = P('Visit the ', gitHubDocs, ' for more information about RNAcanvas.');
   domNode.style.marginTop = '55px';
   return domNode;
 }
