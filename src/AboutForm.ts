@@ -35,7 +35,7 @@ export class AboutForm {
 
     contentContainer.append(ContactEmail());
 
-    contentContainer.append(GitHubDocsRef());
+    contentContainer.append(GitHubPageRef());
 
     let closeButton = CloseButton();
     closeButton.addEventListener('click', () => this.close());
@@ -147,7 +147,7 @@ function PaperDOI() {
   let link = PaperDOILink();
 
   let linkLine = P(label, link);
-  linkLine.style.marginTop = '11px';
+  linkLine.style.marginTop = '10px';
 
   let domNode = document.createElement('div');
   domNode.classList.add(styles['paper-doi']);
@@ -199,25 +199,25 @@ function ContactEmailLink() {
   return contactEmailLink.domNode;
 }
 
-function GitHubDocsRef() {
-  let gitHubDocs = GitHubDocsLink();
+function GitHubPageRef() {
+  let gitHubPage = GitHubPageLink();
 
-  let domNode = P('Visit the ', gitHubDocs, ' for more information about RNAcanvas.');
-  domNode.style.marginTop = '55px';
+  let domNode = P('Visit the ', gitHubPage, ' for more information about RNAcanvas.');
+  domNode.style.marginTop = '56px';
   return domNode;
 }
 
-function GitHubDocsLink() {
-  let gitHubDocsLink = new Link();
+function GitHubPageLink() {
+  let gitHubPageLink = new Link();
 
-  gitHubDocsLink.href = 'https://pzhaojohnson.github.io/rnacanvas.code/';
+  gitHubPageLink.href = 'https://pzhaojohnson.github.io/rnacanvas.code/';
 
-  gitHubDocsLink.textContent = 'GitHub docs';
+  gitHubPageLink.textContent = 'GitHub page';
 
-  gitHubDocsLink.target = '_blank';
-  gitHubDocsLink.rel = 'noreferrer noopener';
+  gitHubPageLink.target = '_blank';
+  gitHubPageLink.rel = 'noreferrer noopener';
 
-  return gitHubDocsLink.domNode;
+  return gitHubPageLink.domNode;
 }
 
 function CloseButton() {

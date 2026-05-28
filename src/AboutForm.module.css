@@ -4,7 +4,7 @@
   right: 86px;
 
   width: 405px;
-  height: 494px;
+  height: 493px;
 
   border-radius: 10px;
 
@@ -71,15 +71,15 @@
 }
 
 .paper-doi {
-  margin-top: 51px;
+  margin-top: 50px;
 }
 
 .contact-email {
-  margin-top: 44px;
+  margin-top: 45px;
 
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 10px;
 
   pointer-events: none;
 }
